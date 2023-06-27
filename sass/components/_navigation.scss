@@ -1,0 +1,141 @@
+
+.header
+{
+    width: $width-full;
+    margin: 0 auto;
+    height: 80px;
+    border-bottom: solid 1px;
+    border-color: $lines-color;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background: $white;
+
+    &__nav
+        {   
+            display:flex;
+            align-items: center;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: $black;
+            font-size: $normal-text-size;
+            font-weight: 500;
+            gap: 46px;
+        
+        &__accent
+            {
+                position: relative;
+            
+            &::after
+                {
+                    content: "";
+                    width: 53px;
+                    height: 4px;
+                    border-radius: 2px;
+                    background-color: $blue;
+                    top: 27px;
+                    position:absolute;
+                }
+            }
+        }
+
+    &__nav-item
+        {
+            float:left;
+            margin-left: 46px;
+            color: $black;
+            transition-property: visibility, opacity, transform, color;
+            transition-duration: $transition-duration-standard;
+            transition-timing-function: $transition-timing-function-standard;
+
+            &:hover,
+            &:focus
+            {
+                color: $blue;
+            }
+
+        }
+        
+    &__logo
+        {
+            margin-left: 215px;
+        }
+        
+    &__contacts-icon1
+        {
+            width:16px;
+            height:12px;
+            margin-right: 10px;
+            fill: $light-grey;
+            transition-property: fill, color;
+            transition-duration: $transition-duration-standard;
+            transition-timing-function: $transition-timing-function-standard;
+        
+
+        }
+        
+    &__contacts-icon2
+        {
+            width:10px;
+            height:16px;
+            margin-right: 10px;
+            margin-bottom: -3px;
+            fill: $light-grey;
+            transition-property: fill, color;
+            transition-duration: $transition-duration-standard;
+            transition-timing-function: var($transition-timing-function-standard);
+        
+        }
+
+    &__contacts-item
+        {
+            height: 16px;
+            color: $light-grey;
+            transition-property: fill, color;
+            transition-duration: $transition-duration-standard;
+            transition-timing-function: $transition-timing-function-standard;
+        
+        }
+
+
+
+    &__contacts
+        {
+            margin-right: 187px;
+            justify-content: space-between;
+            align-items: center;
+    
+        &-block
+            {
+                font-weight: $font-wieght-normal;
+                height: 80px;
+                display:flex;
+                justify-content:center; 
+                gap: 30px;      
+            }
+
+        &-link
+            {
+                width:161px;
+                height: 16px;
+                line-height: 1.5em;
+                letter-spacing: 2%;
+                margin-top: 32px;
+                display:flex;
+                color: $background-grey;
+                fill: $light-grey;
+
+                &:hover .header__contacts-icon1,
+                &:hover .header__contacts-icon2
+                {
+                color: $blue;
+                fill: $blue; 
+                cursor: pointer;
+                }
+            }    
+        }
+    }
+
+
+
+

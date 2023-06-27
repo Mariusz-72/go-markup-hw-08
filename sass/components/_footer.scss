@@ -1,0 +1,182 @@
+footer
+{
+    width: $width-full;
+    height: 252px;
+    display: flex;
+    background: $background-grey;
+}
+
+footer.container
+{
+    display:flex;
+}
+
+.footer
+{
+
+
+    &__address
+        {
+            list-style-type: none;
+            font-style: normal;
+            margin-left: 215px;
+        }
+
+    &__address-item
+        {
+            color: $white;
+            font-style: normal;
+            font-weight: $font-wieght-normal;
+            line-height: 1.71em;
+            letter-spacing: letter-spacing-normal;
+            text-decoration: none;
+        }
+
+    &__mail-tel
+        {
+            color: $white;
+            font-weight: $font-wieght-normal;
+            line-height: 1.71em;
+            text-decoration: none;
+            opacity: 0.6;
+        }
+
+    &__logo
+        {
+            margin-top: 60px;
+            margin-left: 215px;
+        }
+
+    &__socialmedia-text
+        {
+            font-family: $font-family-standard;
+            margin: 75px 0px 30px 10px;
+        }
+
+    &__social-box
+        {
+            margin-left: 50px;
+        }
+
+    &__newsletter
+        {
+            width: 570px;
+            height: 86px;
+            margin-top: 72px;
+            margin-left: 78px;
+        }
+
+    &__newsletter-text
+        {
+
+            margin-bottom: 20px;
+        }
+
+    &__email
+        {
+            width: 358px;
+            height: 50px;
+            font-size: $bigger-text-size;
+            font-weight: $font-wieght-normal;
+            line-height: 1.5em;
+            letter-spacing: $letter-spacing-normal;
+            padding-left: 40px;
+            color: $white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: $border-radius-normal;
+            background-color: $background-grey;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+            stroke: 1px solid rgba(255,255,255,0.3);
+        }
+
+    &__button-signup
+        {
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            height: 50px;
+            cursor: pointer;
+            background-color: $blue;
+            padding-top: 12px;
+            margin-left: 12px;
+            border: none;
+            border-radius: $border-radius-normal;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+
+    &__newsletter-field
+        {
+            display: flex;
+            width: 570px;
+        }
+
+    &__button-icon
+        {
+            width: 24px;
+            height: 24px;
+            fill: $white;
+            margin-left: 24px;
+        }
+
+    &__button-text
+        {
+            margin-left: 20px;
+            color: $white;
+            font-weight: 700;
+            font-size: $bigger-text-size;
+            line-height: 1.7em;
+            letter-spacing: 0.06em;
+            text-align: center;
+        }
+
+}
+
+
+.socialmedia
+    {
+
+    &__list
+        {
+            display: flex;
+            list-style: none;
+            gap:15px;
+            margin: 10px  30px 30px 0px;
+            background: $background-grey;
+        }
+
+    &__list-item
+        {
+            height: 44px;
+            width: 44px;
+            fill:  $white;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%; 
+            cursor: pointer; 
+            transition-property: background-color;
+            transition-duration: $transition-duration-standard;
+            transition-timing-function: $transition-timing-function-standard;
+
+
+        }
+
+        &__list-item:hover
+            { 
+                background-color: $blue; 
+            }
+
+        &__list-item:focus
+            { 
+                background-color: $blue; 
+            }
+
+    &__icon
+        {
+            width:44px;
+            height:44px;
+            padding: 12px;
+            fill:  $white;
+        }
+
+    }
+
+

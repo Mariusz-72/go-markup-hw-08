@@ -1,0 +1,106 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+h2 
+{
+    font-weight: 700px;
+    size: 26px;
+    line-height: 1.97em;
+    margin: 20px;
+    text-decoration: none;
+}
+
+
+body
+{
+    font-family: "Roboto", sans-serif;
+    font-size: $normal-text-size;
+}
+
+section 
+{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+a 
+{
+    margin: 0px;
+    text-decoration: none;
+    color: $light-grey;
+}
+
+a:hover,
+a:focus,
+a:active 
+{
+    color: $blue;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,h2,h3,h4,p
+{
+    margin: 0px;
+}
+
+.main__title
+{
+    color: $black;
+    font-weight: $font-weight-bold;
+    font-size: 36px;
+    line-height: 1.0em;
+    letter-spacing: $letter-spacing-normal;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container
+{
+    padding: 0 0 0 0px;
+    
+    
+    margin: 0 auto; 
+    color: $white;  
+}
+
+.logo-pre
+{
+    font-family: $font-family-special;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    font-size: 26px;
+    line-height: 2em;
+    letter-spacing: 3%;
+    color:$blue;
+}
+
+.logo-after
+{
+    font-family: $font-family-special;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    font-size: 26px;
+    line-height: 2em;
+    letter-spacing: 3%;
+    color: $black;
+}
+
+.logo__after2
+{
+    font-family: $font-family-special;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 2em;
+    letter-spacing: 3%;
+    color: $white;
+}

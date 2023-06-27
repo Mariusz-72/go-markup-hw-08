@@ -1,0 +1,51 @@
+.advert
+{
+    background-color: $dark-gray;
+    height: 600px;
+    width: $width-full;
+    min-width: fit-content;
+    
+    margin: 0 auto;
+    text-align: center;
+    padding: 200px 200px;
+    color: $white;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), 
+                        url("../images/imgbackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+
+
+    &__title
+        {
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.36em;
+            text-align: center;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            width: 696px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            text-shadow: 0px 4px 4px $black;
+            -webkit-text-stroke: 1px $black;
+            
+        }
+
+    
+    &__button
+        {
+            cursor: pointer;
+            background-color: $blue;
+            color: $white;
+            font-weight: $font-weight-bold;
+            font-size: $bigger-text-size;
+            line-height: 1.88em;
+            letter-spacing: 0.06em;
+            text-align: center;
+            min-width: 200px;
+            border: none;
+            border-radius: $border-radius-normal;
+            padding: 10px 42px;
+        }
+}

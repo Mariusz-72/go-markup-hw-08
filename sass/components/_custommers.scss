@@ -1,0 +1,54 @@
+.customers
+{
+
+&__block
+{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0 auto;
+        width: $width-full;
+    min-width: fit-content;
+}
+
+&__list
+{
+    height: 92px;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+}
+
+&__item
+    {
+    width: 170px;
+    height: 92px;
+    fill: $extra-light-grey;
+    border:1px solid $extra-light-grey;
+    border-radius: 5px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    cursor: pointer; 
+    transition-property: transform, border-color, fill;
+    transition-duration: $transition-duration-standard;
+    transition-timing-function: $transition-timing-function-standard;
+
+        &:hover,
+        &:active,
+        &:focus
+            {
+            fill: $blue; 
+            border-color: $blue;
+            }
+    }   
+
+&__icon
+{
+    height: 60px;
+    width: 106px;
+}
+
+}
+

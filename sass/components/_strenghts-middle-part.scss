@@ -1,0 +1,57 @@
+.strenghts
+{
+    margin: 0 auto;
+    justify-content: space-between;
+    width: $width-full;
+    min-width: fit-content;
+
+    &__block
+{
+    height: 251px; 
+}
+
+&__list 
+{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+&__item
+{
+    width: 270px;
+    height: 101px;
+}
+
+&__title
+{
+    color: $black;
+    font-weight: 700;
+    line-height: 1.0em;
+    letter-spacing: $letter-spacing-normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+&__text
+{
+    color: $light-grey;
+    line-height: 1.71em;
+    width: 270px;
+}
+
+&__icon
+{
+    fill: $black;
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    background-color: $antenna-grey;
+    border-radius: $border-radius-normal;
+    margin-bottom: 30px;
+}
+
+
+}
