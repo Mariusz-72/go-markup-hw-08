@@ -1,8 +1,11 @@
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./components/globals";
+@import "./components/mobile-menu";
 @import "./components/advertisement-upper-part";
 @import "./components/custommers";
 @import "./components/footer";
-@import "./components/globals";
+
 @import "./components/modal";
 @import "./components/navigation";
 @import "./components/offer-lower-part";

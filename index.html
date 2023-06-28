@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="zadanie 7" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css" type="text/css">
-    <title>WebStudio Zadanie 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>WebStudio Zadanie 8</title>
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
         integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer">
-    <!--<link rel="stylesheet" href="css/styles.css" type="text/css">-->
+    <link rel="stylesheet" href="./css/main.min.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,6 +25,8 @@
 <header class="container">
     <div class="header">
 
+        
+
             <div class="header__nav">
 
                 <section class="header__logo">
@@ -34,6 +36,12 @@
                     <span class="logo-after">Studio</span></a>
                 </h2>
                 </section>
+
+          <button type="button" 
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"><svg class="header__hamburger-icon" width="30px" height="30px"><use href="./images/icons.svg#icon-menu-mobile"></use></svg>
+        </button>
 
             <nav>
                 <ul class="header-nav">
@@ -334,7 +342,7 @@
 </main>
 
 <!--footer-->
-    <footer class="container">
+<footer class="container">
         <div class="footer__block">
             <h2 class="footer__logo">
                 <a href="index.html">
@@ -394,8 +402,66 @@
                     </button>
                 </form>
         </div>
-    </footer>
+</footer>
 
+    <!--mobile-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu" type="button">
+        <svg width="20" height="20">
+          <use href="./images/icons.svg#icon-mobile-cross"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu__list">
+          <a
+            class="mobile-menu__link"
+            href="index.html"
+            >Agencja</a
+          >
+        </li>
+        <li class="mobile-menu__list">
+          <a class="mobile-menu__link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile-menu__list">
+          <a class="mobile-menu__link" href="#">Kontakt</a>
+        </li>
+      </ul>
+
+      <div class="mobile-contact">
+        <a class="mobile-contact__phone" href="tel:+48111111111"
+          >+48 111 111 111</a
+        >
+        <a class="mobile-contact__email" href="mailto:info@devstudio.com"
+          >info@devstudio.com</a
+        >
+      </div>
+
+      <ul class="mobile-socials">
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link" href="#">Instagram</a>
+        </li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link" href="#">Tweeter</a>
+        </li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link" href="#">Facebook</a>
+        </li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link" href="#">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+    
     <!--modal window-->
 
     <div class="modal__backdrop modal__is-hidden" data-modal>
@@ -468,6 +534,14 @@
                 </form>
         </div>    
     </div>
+
+ <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="./js/mobile-menu.js"></script>    
     <script src="./js/modal.js"></script>    
 </body>
 </html>

@@ -20,12 +20,17 @@ body
 {
     font-family: "Roboto", sans-serif;
     font-size: $normal-text-size;
+    
+    @media screen and (max-width: 320px)
+    {
+    overflow-x: scroll;
+    }
 }
 
 section 
 {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    margin:0;
+    padding:0;
 }
 
 a 
@@ -65,11 +70,17 @@ h1,h2,h3,h4,p
 
 .container
 {
+
     padding: 0 0 0 0px;
-    
-    
-    margin: 0 auto; 
-    color: $white;  
+      
+
+   @include tablet {
+        max-width: 768px;
+    }
+
+    @include desktop {
+        max-width: 1200px;
+    }
 }
 
 .logo-pre
@@ -77,10 +88,13 @@ h1,h2,h3,h4,p
     font-family: $font-family-special;
     font-style: normal;
     font-weight: $font-weight-bold;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 2em;
     letter-spacing: 3%;
     color:$blue;
+     @include desktop {
+      font-size: 26px;
+    }
 }
 
 .logo-after
@@ -88,10 +102,13 @@ h1,h2,h3,h4,p
     font-family: $font-family-special;
     font-style: normal;
     font-weight: $font-weight-bold;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 2em;
     letter-spacing: 3%;
     color: $black;
+     @include desktop {
+      font-size: 26px;
+    }
 }
 
 .logo__after2
@@ -99,8 +116,11 @@ h1,h2,h3,h4,p
     font-family: $font-family-special;
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 2em;
     letter-spacing: 3%;
     color: $white;
+     @include desktop {
+      font-size: 26px;
+    }
 }

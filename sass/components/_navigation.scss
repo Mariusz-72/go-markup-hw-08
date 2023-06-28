@@ -1,22 +1,40 @@
 
 .header
 {
-    width: $width-full;
+    width: 1200px;
     margin: 0 auto;
-    height: 80px;
     border-bottom: solid 1px;
     border-color: $lines-color;
     display:flex;
-    justify-content:space-between;
-    align-items: center;
+    
+    
     background: $white;
+
+     @include tablet {
+      display: flex;
+      align-items: center;
+      padding: 21px 15px;
+      height: 80px;
+    }
+    @include desktop {
+      align-items: center;
+      padding: 25px 0;
+      height: 80px;
+    }
+
+ &__hamburger-icon {
+     fill: $black;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
+  }
+  &__hamburger-icon:hover,
+  &__hamburger-icon:focus {
+    fill: $blue;
+  }
 
     &__nav
         {   
-            display:flex;
-            align-items: center;
-            padding-top: 25px;
-            padding-bottom: 25px;
+            display:flex;        
+            align-items:center;
             color: $black;
             font-size: $normal-text-size;
             font-weight: 500;
@@ -29,11 +47,13 @@
             &::after
                 {
                     content: "";
+                    
                     width: 53px;
                     height: 4px;
                     border-radius: 2px;
                     background-color: $blue;
-                    top: 27px;
+                    top: 44px;
+                    left: -50px;
                     position:absolute;
                 }
             }
@@ -41,12 +61,22 @@
 
     &__nav-item
         {
+display: none;            
             float:left;
             margin-left: 46px;
             color: $black;
             transition-property: visibility, opacity, transform, color;
             transition-duration: $transition-duration-standard;
             transition-timing-function: $transition-timing-function-standard;
+
+ @include tablet {
+      display: flex;
+      margin-left: 30px;
+    }
+    @include desktop {
+      display: flex;
+      margin-left: 49px;}
+
 
             &:hover,
             &:focus
@@ -58,9 +88,79 @@
         
     &__logo
         {
-            margin-left: 215px;
+                margin-left: 40px;
+            
         }
+
+    &__contacts
+        {
+            float: left;
+            width: 550px;
+            margin-left: 60px;
+            
+            align-items: center;          
+    }
+
+        &-block
+            {
+                display:flex;
+                float: left;
+                font-weight: $font-wieght-normal;
+                height: 80px;
+            }
+
+        &-link
+            {
+                width:161px;
+                height: 16px;
+                
+                line-height: 1.5em;
+                letter-spacing: 2%;
+                margin-top: 32px;
+                display:flex;
+                color: $background-grey;
+                fill: $light-grey;
+
+                
+            } 
+
+
+
+    &__contacts-item
+        {
+display: none;            
+            
+            color: $light-grey;
+            transition-property: fill, color;
+            transition-duration: $transition-duration-standard;
+            transition-timing-function: $transition-timing-function-standard;
+    
+                &:hover .header__contacts-icon1,
+                &:hover .header__contacts-icon2,
+                &:focus .header__contacts-icon1,
+                &:focus .header__contacts-icon2
+                {
+                color: $blue;
+                fill: $blue; 
+                cursor: pointer;
+                }
+
+@include tablet {
+      display: flex;
+      padding-left: 100px;
+      }
+/*poniższy padding wspópracuje z marginem w linii 98  */
+    @include desktop {
+      display: flex;
+      float: left;
+      padding-left: 100px;
+}
+
+      
+
+        }       
         
+                
     &__contacts-icon1
         {
             width:16px;
@@ -70,7 +170,7 @@
             transition-property: fill, color;
             transition-duration: $transition-duration-standard;
             transition-timing-function: $transition-timing-function-standard;
-        
+       
 
         }
         
@@ -83,58 +183,24 @@
             fill: $light-grey;
             transition-property: fill, color;
             transition-duration: $transition-duration-standard;
-            transition-timing-function: var($transition-timing-function-standard);
-        
-        }
-
-    &__contacts-item
-        {
-            height: 16px;
-            color: $light-grey;
-            transition-property: fill, color;
-            transition-duration: $transition-duration-standard;
             transition-timing-function: $transition-timing-function-standard;
+
+
+     
         
-        }
+
+
+        
 
 
 
-    &__contacts
-        {
-            margin-right: 187px;
-            justify-content: space-between;
-            align-items: center;
-    
-        &-block
-            {
-                font-weight: $font-wieght-normal;
-                height: 80px;
-                display:flex;
-                justify-content:center; 
-                gap: 30px;      
-            }
 
-        &-link
-            {
-                width:161px;
-                height: 16px;
-                line-height: 1.5em;
-                letter-spacing: 2%;
-                margin-top: 32px;
-                display:flex;
-                color: $background-grey;
-                fill: $light-grey;
 
-                &:hover .header__contacts-icon1,
-                &:hover .header__contacts-icon2
-                {
-                color: $blue;
-                fill: $blue; 
-                cursor: pointer;
-                }
-            }    
+   
         }
     }
+        
+    
 
 
 

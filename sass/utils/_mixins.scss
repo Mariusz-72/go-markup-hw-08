@@ -9,3 +9,9 @@
         @media screen and (min-width: 1200px)
         {@content;}
 }
+
+@mixin phone 
+{
+        @media screen and (min-width: 320px)
+        {@content;}
+}
