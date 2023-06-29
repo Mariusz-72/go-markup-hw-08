@@ -1,22 +1,22 @@
 
 .header
 {
-    width: 1200px;
+max-width: 1200px;
+min-height: 80px;
     margin: 0 auto;
     border-bottom: solid 1px;
     border-color: $lines-color;
     display:flex;
-    
-    
     background: $white;
 
      @include tablet {
-      display: flex;
+.display: flex;
       align-items: center;
       padding: 21px 15px;
       height: 80px;
     }
     @include desktop {
+        display: flex;
       align-items: center;
       padding: 25px 0;
       height: 80px;
@@ -24,7 +24,7 @@
 
  &__hamburger-icon {
      fill: $black;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   }
   &__hamburger-icon:hover,
   &__hamburger-icon:focus {
@@ -34,7 +34,7 @@
     &__nav
         {   
             display:flex;        
-            align-items:center;
+            align-items: center;
             color: $black;
             font-size: $normal-text-size;
             font-weight: 500;
@@ -61,8 +61,8 @@
 
     &__nav-item
         {
-display: none;            
-            float:left;
+            display: none;            
+            float: left;
             margin-left: 46px;
             color: $black;
             transition-property: visibility, opacity, transform, color;
@@ -75,35 +75,39 @@ display: none;
     }
     @include desktop {
       display: flex;
+      float:left;
       margin-left: 49px;}
-
 
             &:hover,
             &:focus
             {
                 color: $blue;
             }
-
         }
         
     &__logo
         {
-                margin-left: 40px;
-            
+            margin-left: 40px;
+            min-width: 140px;
         }
 
     &__contacts
         {
             float: left;
-            width: 550px;
-            margin-left: 60px;
+            .margin-left: 60px;
+            align-items: center;   
             
-            align-items: center;          
+            
+             @include desktop {
+      .display: flex;
+      min-width: 550px;
+      float:left;
+      margin-left: 49px;}
     }
 
         &-block
             {
-                display:flex;
+                display: flex;
                 float: left;
                 font-weight: $font-wieght-normal;
                 height: 80px;
@@ -117,7 +121,7 @@ display: none;
                 line-height: 1.5em;
                 letter-spacing: 2%;
                 margin-top: 32px;
-                display:flex;
+                display: flex;
                 color: $background-grey;
                 fill: $light-grey;
 
@@ -128,8 +132,7 @@ display: none;
 
     &__contacts-item
         {
-display: none;            
-            
+            display: none;            
             color: $light-grey;
             transition-property: fill, color;
             transition-duration: $transition-duration-standard;
@@ -147,18 +150,16 @@ display: none;
 
 @include tablet {
       display: flex;
-      padding-left: 100px;
+      .padding-left: 100px;
       }
 /*poniższy padding wspópracuje z marginem w linii 98  */
-    @include desktop {
+    @include desktop 
+    {
       display: flex;
       float: left;
       padding-left: 100px;
-}
-
-      
-
-        }       
+    }
+}       
         
                 
     &__contacts-icon1
@@ -170,8 +171,6 @@ display: none;
             transition-property: fill, color;
             transition-duration: $transition-duration-standard;
             transition-timing-function: $transition-timing-function-standard;
-       
-
         }
         
     &__contacts-icon2
@@ -184,19 +183,6 @@ display: none;
             transition-property: fill, color;
             transition-duration: $transition-duration-standard;
             transition-timing-function: $transition-timing-function-standard;
-
-
-     
-        
-
-
-        
-
-
-
-
-
-   
         }
     }
         
