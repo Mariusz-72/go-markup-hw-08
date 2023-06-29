@@ -71,8 +71,8 @@ h1,h2,h3,h4,p
 .container
 {
 
-    padding: 0 0 0 0px;
-      
+    padding: 15px 0px;
+    margin: 0 auto;  
 
    @include tablet {
         max-width: 768px;
