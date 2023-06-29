@@ -1,34 +1,45 @@
 .strenghts
 {
-max-width: 1600px;
-
-    &__block
-{
-   margin-top: 80px; 
-   
-}
 
 &__list 
 {
-padding: 10px 10px;
+    flex-direction: column;    
+    padding: 10px 10px;
     list-style: none;
+    align-items: center;
+    gap:30px;
+    justify-content: center;
 
 
-    position: absolute;
-        top: 100em;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    
+    @include tablet 
+        {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+    @include desktop 
+        {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        }
 }
 
 &__item
 {
-
-width: 270px;
-
-
+    @include desktop 
+    {
+        margin: 0 auto;
+        width: 270px;
+        gap: 30px;
+    }
+    @include tablet 
+    {
+        width: 270px;
+        margin-bottom: 30px;
+    }
 }
+
 
 &__title
 {
@@ -37,7 +48,17 @@ width: 270px;
     line-height: 1.0em;
     letter-spacing: $letter-spacing-normal;
     text-transform: uppercase;
+    text-align: center;
     margin-bottom: 10px;
+
+    @include tablet 
+    {
+        text-align: left;
+    }
+    @include desktop
+    {
+        text-align: left;
+    }
 }
 
 &__text
@@ -48,18 +69,29 @@ width: 270px;
     margin-bottom: 30px;
 }
 
+
+
 &__icon
-{
-align-items: center;
-justify-content: center;
+    {
+    flex-basis: calc((100%-3*30px)/4);
     fill: $black;
-    width: 270px;
+    width:450px;
     height: 120px;
-    padding: 25px 100px;
+    padding: 25px 0px;
     background-color: $antenna-grey;
     border-radius: $border-radius-normal;
     margin-bottom: 30px;
-}
 
-
+    @include desktop 
+        {
+        margin: 0 auto;
+        width: 270px;
+        gap: 30px;
+        }
+    @include tablet
+        {
+        width: 270px;
+        margin-bottom: 30px;
+        }
+    }
 }

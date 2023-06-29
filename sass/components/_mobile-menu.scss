@@ -1,103 +1,120 @@
 .menu-container.is-open {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 .menu-container {
-  background-color: #ffffff;
-  position: fixed;
-  inset: 0;
-  
-display: flex;
-  flex-direction: column;
+    background-color: #ffffff;
+    position: fixed;
+    inset: 0;  
+    display: flex;
+    flex-direction: column;
 
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 48px 40px;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 48px 40px;
 
-  @include tablet {
+    @include tablet 
+    {
     display: none;
-  }
-  @include desktop {
+    }
+
+    @include desktop 
+    {
     display: none;
-  }
+    }
 }
 .menu-toggle {
-  position: absolute ;
-  right: 15px;
-  top: 23px;
-  fill:#212121;
-  color:#212121;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 50%;
-  cursor: pointer;
-  outline: none;
-  .margin-right: -140px;
- 
-  padding:0;
+    position: absolute ;
+    right: 15px;
+    top: 23px;
+    fill:#212121;
+    color:#212121;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    padding:0;
 
-  @include desktop {
+    @include desktop 
+    {
     display: none;
-  }
-  @include tablet {
+    }
+
+    @include tablet 
+    {
     display: none;
-  }
+    }
 }
+
 .mobile-menu {
-  &__link {
-    font-size: 40px;
-    line-height: 1.17;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    
-    color: #212121;
-    display: block;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &__link 
+    {
+        font-size: 40px;
+        line-height: 1.17;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: #212121;
+        display: block;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:focus,
-    &:hover {
-      color: #2196f3;
+    &:hover 
+        {
+        color: #2196f3;
+        }
     }
 
-
-  }
-  &__list {
-    &:not(:last-child) {
-      margin-bottom: 36px;
-    }
-  }
+    &__list 
+        {
+        &:not(:last-child) 
+        {
+            margin-bottom: 36px;
+        }
+        }
 }
-.mobile-contact {
-  margin-top: 306px;
-  &__phone {
-    font-size: 34px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    display: block;
-    color: #2196f3;
-    margin-bottom: 32px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__email {
+
+.mobile-contact 
+{
+    margin-top: 306px;
+
+    &__phone 
+    {
+        font-size: 34px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        display: block;
+        color: #2196f3;
+        margin-bottom: 32px;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__email 
+    {
     @extend .mobile-contact__phone;
     font-size: 24px;
     color: #757575;
     margin-bottom: 64px;
-  }
+    }
 }
-.mobile-socials {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 10px;
 
-  &__item:not(:last-child) {
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-    margin-right: 10px;
-    padding-right: 10px;
-  }
-  &__link {
+.mobile-socials 
+{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+
+    &__item:not(:last-child) 
+    {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+
+    &__link 
+    {
     color: #2196f3;
     font-weight: 500;
     font-size: 18px;
@@ -105,5 +122,5 @@ display: flex;
     letter-spacing: 0.02em;
     padding: 0;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    }
 }
