@@ -1,6 +1,6 @@
 footer
 {
-    width: $width-full;
+    .width: $width-full;
     height: 252px;
     display: flex;
     background: $background-grey;
@@ -9,7 +9,8 @@ footer
 footer.container
 {
     display:flex;
- display: none;     
+flex-direction: column;
+    
 }
 
 .footer
@@ -57,6 +58,7 @@ footer.container
     &__social-box
         {
             margin-left: 50px;
+        background: $background-grey;
         }
 
     &__newsletter
@@ -65,6 +67,7 @@ footer.container
             height: 86px;
             margin-top: 72px;
             margin-left: 78px;
+        background: $background-grey;
         }
 
     &__newsletter-text

@@ -4,21 +4,35 @@
 
     &__block
     {
-  display: none;       
+      flex-direction: column;
         background-color: $vanila-white;
         margin: 0px auto;
         align-items: center;
         width: $width-full;
-        min-width: fit-content;
+        max-width: fit-content;
     }
 
     
     &__list
     {
         display: flex;
+        flex-direction: column;
         gap: 30px;
         justify-content: center;
         list-style: none;
+
+@include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      display: flex;
+    }
+    @include desktop {
+      flex-direction: row;
+      justify-content: center;
+      display: flex;
+    }
+
     }
 
     &__item

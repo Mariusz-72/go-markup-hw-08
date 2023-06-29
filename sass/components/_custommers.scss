@@ -1,40 +1,75 @@
 .customers
 {
 
-&__block
-{
-    display: flex;
- display: none;     
-    gap: 30px;
-    justify-content: center;
-    margin: 0 auto;
-        width: $width-full;
-    min-width: fit-content;
-}
 
-&__list
-{
-    height: 92px;
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    justify-content: center;
-}
+    &__block
+        {
 
-&__item
-    {
-    width: 170px;
-    height: 92px;
-    fill: $extra-light-grey;
-    border:1px solid $extra-light-grey;
-    border-radius: 5px;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    cursor: pointer; 
-    transition-property: transform, border-color, fill;
-    transition-duration: $transition-duration-standard;
-    transition-timing-function: $transition-timing-function-standard;
+        align-items: center;
+            gap: 30px;
+            justify-content: center;
+            margin: 0 auto;
+        .width: 768px;
+        @include tablet 
+            {
+            width: 768px;
+            }
+        @include desktop 
+            {
+            width:1200px;
+            }
+
+
+        }
+
+    &__list
+        {
+        
+
+            display: flex;
+
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        
+
+            list-style: none;
+        gap: 30px;
+
+        @include desktop 
+            {
+            flex-wrap: nowrap;
+            }
+
+        }
+
+    &__item
+        {
+
+        width: 170px;
+            height: 92px;
+            fill: $extra-light-grey;
+            border:1px solid $extra-light-grey;
+            border-radius: 5px;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            margin-bottom: 10px;
+            cursor: pointer; 
+            transition-property: transform, border-color, fill;
+            transition-duration: $transition-duration-standard;
+            transition-timing-function: $transition-timing-function-standard;
+
+
+        @include tablet 
+            {
+            width: 170px;
+            }
+        @include desktop 
+            {
+            width: 210px;
+            }
 
         &:hover,
         &:active,
@@ -43,13 +78,13 @@
             fill: $blue; 
             border-color: $blue;
             }
-    }   
+        }   
 
-&__icon
-{
-    height: 60px;
-    width: 106px;
-}
+    &__icon
+        {
+        
+
+        }
 
 }
 
