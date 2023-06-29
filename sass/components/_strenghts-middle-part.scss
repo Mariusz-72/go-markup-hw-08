@@ -1,29 +1,33 @@
 .strenghts
 {
- display: none;
-    margin: 0 auto;
-    justify-content: space-between;
-    width: $width-full;
-    min-width: fit-content;
+max-width: 1600px;
 
     &__block
 {
-    height: 251px; 
+   margin-top: 80px; 
+   
 }
 
 &__list 
 {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
+padding: 10px 10px;
     list-style: none;
-    margin-bottom: 50px;
+
+
+    position: absolute;
+        top: 100em;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    
 }
 
 &__item
 {
-    width: 270px;
-    height: 101px;
+
+width: 270px;
+
+
 }
 
 &__title
@@ -40,11 +44,14 @@
 {
     color: $light-grey;
     line-height: 1.71em;
-    width: 270px;
+    min-width: 270px;
+    margin-bottom: 30px;
 }
 
 &__icon
 {
+align-items: center;
+justify-content: center;
     fill: $black;
     width: 270px;
     height: 120px;
