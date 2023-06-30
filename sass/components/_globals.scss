@@ -70,19 +70,19 @@ h1,h2,h3,h4,p
 
 .container
 {
-
     padding: 15px 0px;
     margin: 0 auto;  
-max-width: 480px;
+    max-width: 480px;
 
     @include tablet 
-    {
-        max-width: 768px;
-    }
+        {
+            max-width: 768px;
+        }
 
-    @include desktop {
-        max-width: 1200px;
-    }
+    @include desktop
+        {
+            max-width: 1600px;
+        }
 }
 
 .logo-pre

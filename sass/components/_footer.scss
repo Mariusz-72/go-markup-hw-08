@@ -1,27 +1,91 @@
 footer
 {
-    .width: $width-full;
+    
     height: 252px;
     display: flex;
     background: $background-grey;
+
+            @include tablet 
+                {
+                    width: 768px;
+                    margin: 0;
+                    padding: 0;
+                }
+            @include desktop 
+                {
+                    width: 1600px;
+                }
 }
 
 footer.container
 {
     display:flex;
-flex-direction: column;
-    
+    flex-direction: column;
+    width: 480px;  
+
+            @include tablet 
+                {
+                    width: 768px;
+                    display: flex;  
+                    justify-content: baseline; 
+                    padding: 0;
+                }
+
+            @include desktop 
+                {
+                    width: 1600px;
+                    flex-direction: row;
+                }
 }
+
+.footer2
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: central;
+
+            @include tablet 
+                {
+                    display: flex;
+                    flex-direction: row;
+                }
+                 @include desktop
+                {
+                    width: 800px;
+                    display: flex;
+                    flex-direction: row;
+                }
+}
+
 
 .footer
 {
+    &__block
+        {
+            @include tablet 
+                {
+                    width: 384px;
+                    justify-content: baseline; 
+                    align-items: center;
+                    background: $background-grey;
+                }
 
+            @include desktop 
+                {
+                    width: 461px;
+                }
+        }
 
     &__address
         {
             list-style-type: none;
             font-style: normal;
-            margin-left: 215px;
+            text-align: center;
+
+            @include desktop 
+                {
+                    width: 461px;
+                }
         }
 
     &__address-item
@@ -44,41 +108,113 @@ flex-direction: column;
         }
 
     &__logo
-        {
-            margin-top: 60px;
-            margin-left: 215px;
-        }
-
-    &__socialmedia-text
-        {
-            font-family: $font-family-standard;
-            margin: 75px 0px 30px 10px;
+        {   
+            display: flex;
+            width: 384px;
+            text-align: center;
+            padding: 60px 120px 20px 120px;
+            
+            
         }
 
     &__social-box
         {
-            margin-left: 50px;
-        background: $background-grey;
+            width:480px;        
+            background: $background-grey;
+
+            @include tablet 
+                {
+                    width: 384px;
+                    padding: 0;
+                }
+            @include desktop 
+                {
+                    width: 206px;
+                }
+        }
+
+
+    &__socialmedia-text
+        {
+            font-family: $font-family-standard;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 20px;
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+
+            @include tablet 
+                {
+                    margin-top: 20px;
+                }
+    
+        }
+
+    &__socialmedia-list
+        {
+            @include tablet
+                {
+                    padding:0;
+                    margin:0;
+                }
         }
 
     &__newsletter
         {
-            width: 570px;
-            height: 86px;
-            margin-top: 72px;
-            margin-left: 78px;
-        background: $background-grey;
+            margin-bottom: 30px;
+            background: $background-grey;
+
+            @include desktop 
+                {
+                    justify-content: left;
+                }
         }
+
+    &__newsletter-field
+        {
+            display: flex;
+            flex-direction: column;
+            width: 480px;
+            align-items: center;        
+            gap: 30px;  
+            padding-bottom: 30px; 
+            background: $background-grey; 
+
+            @include tablet 
+                {
+                    width: 768px;
+                    display: flex;
+                }
+
+                @include desktop 
+                {
+                    flex-direction: row;
+                    justify-content: start;
+                    gap: 0;
+                }
+
+        }    
 
     &__newsletter-text
         {
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: -10px;
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
 
-            margin-bottom: 20px;
+            @include desktop{
+                padding-top: 80px;
+                text-align: left;
+            }
         }
 
     &__email
         {
-            width: 358px;
+            width: 450px;
             height: 50px;
             font-size: $bigger-text-size;
             font-weight: $font-wieght-normal;
@@ -91,6 +227,12 @@ flex-direction: column;
             background-color: $background-grey;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
             stroke: 1px solid rgba(255,255,255,0.3);
+
+            @include desktop 
+            {
+                width: 358px;
+            }
+
         }
 
     &__button-signup
@@ -103,15 +245,15 @@ flex-direction: column;
             background-color: $blue;
             padding-top: 12px;
             margin-left: 12px;
+            margin-bottom: 30px;
             border: none;
             border-radius: $border-radius-normal;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        }
 
-    &__newsletter-field
-        {
-            display: flex;
-            width: 570px;
+            @include desktop 
+            {
+                margin-top: 29px;
+            }
         }
 
     &__button-icon
@@ -144,8 +286,15 @@ flex-direction: column;
             display: flex;
             list-style: none;
             gap:15px;
-            margin: 10px  30px 30px 0px;
+            justify-content: center;
+            margin-left: 20px;        
+            padding: 20px  10px 30px 0px;
             background: $background-grey;
+
+            @include tablet 
+                {
+                    padding: 0;
+                }
         }
 
     &__list-item
@@ -163,15 +312,15 @@ flex-direction: column;
 
         }
 
-        &__list-item:hover
-            { 
-                background-color: $blue; 
-            }
+    &__list-item:hover
+        { 
+            background-color: $blue; 
+        }
 
-        &__list-item:focus
-            { 
-                background-color: $blue; 
-            }
+    &__list-item:focus
+        { 
+            background-color: $blue; 
+        }
 
     &__icon
         {
