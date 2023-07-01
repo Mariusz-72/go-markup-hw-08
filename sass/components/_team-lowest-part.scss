@@ -4,13 +4,17 @@
 
     &__block
     {
-      flex-direction: column;
+        flex-direction: column;
         background-color: $vanila-white;
         margin: 0px auto;
         align-items: center;
-        width: $width-full;
+        width: 100%;
         max-width: fit-content;
 
+        @include desktop {
+            min-width: 1600px;
+            
+        }
     }
 
     
@@ -29,10 +33,11 @@
       display: flex;
     }
     @include desktop {
-        width: 1600px;
+        
       flex-direction: row;
       justify-content: center;
       display: flex;
+      padding-bottom: 30px;
     }
 
     }
@@ -74,6 +79,8 @@
         letter-spacing: $letter-spacing-normal;
         color: $light-grey;
         margin-bottom: 5px;
+
+
     }
 
     &__card-socialmedia

@@ -66,6 +66,12 @@ h1,h2,h3,h4,p
     letter-spacing: $letter-spacing-normal;
     text-align: center;
     margin: 40px 0 60px 0;
+
+    @include desktop
+    {
+        margin: 64px 0 50px;
+        padding: 64px 0 50px;;
+    }
 }
 
 .container
@@ -81,7 +87,8 @@ h1,h2,h3,h4,p
 
     @include desktop
         {
-max-width: 1200px;
+            
+            min-width: 1600px;
         }
 }
 

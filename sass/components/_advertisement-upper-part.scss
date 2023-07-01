@@ -29,7 +29,7 @@
 
     @include desktop 
     {
-    max-width: 1600px;
+    min-width: 1600px;
     height: 600px;
     background-size: cover;
     background-image: 
