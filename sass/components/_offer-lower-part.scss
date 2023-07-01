@@ -1,16 +1,17 @@
 .offer
 {
-    display: flex;
- display: none;    
-    gap: 30px;
+
+    display: none;    
+    
     justify-content: center;
     margin: 0 auto;
-        width: $width-full;
+    width: $width-full;
     min-width: fit-content;
 
-    @include desktop
+        @include desktop
     {
-        display: flex;
+        display: contents;
+        
     }
 
 &__list

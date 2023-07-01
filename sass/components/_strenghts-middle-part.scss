@@ -5,6 +5,11 @@
     align-items: center;
     
 
+    @include desktop 
+        {
+          
+        }
+
 &__list 
 {
     flex-direction: column;    
@@ -30,12 +35,12 @@
     @include desktop 
         {
             
-            display: flex;
+            
             min-width: 1600px;
             margin-top: 50px;
         
             justify-content: center;
-            flex-flow: nowrap;
+            
             gap:10px;
         }
 }
