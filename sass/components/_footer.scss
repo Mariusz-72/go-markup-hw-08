@@ -21,7 +21,7 @@ footer.container
 {
     display:flex;
     flex-direction: column;
-    width: 480px;  
+    .width: 480px;  
 
             @include tablet 
                 {
@@ -33,7 +33,7 @@ footer.container
 
             @include desktop 
                 {
-         .width: 1600px;
+         
                     flex-direction: row;
                 }
 }
@@ -49,7 +49,7 @@ footer.container
                     display: flex;
                     flex-direction: row;
                 }
-                 @include desktop
+            @include desktop
                 {
                     width: 800px;
                     display: flex;
