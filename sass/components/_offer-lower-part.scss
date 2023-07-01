@@ -8,6 +8,11 @@
         width: $width-full;
     min-width: fit-content;
 
+    @include desktop
+    {
+        display: flex;
+    }
+
 &__list
 {
     display: flex;

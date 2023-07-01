@@ -1,35 +1,44 @@
 
 .header
 {
-max-width: 1600px;
-min-height: 80px;
+    display:flex;
+    min-width: 480px;
+    min-height: 80px;
     margin: 0 auto;
+    justify-content: space-between ;
     border-bottom: solid 1px;
     border-color: $lines-color;
-    display:flex;
     background: $white;
 
-     @include tablet {
-.display: flex;
-      align-items: center;
-      padding: 21px 15px;
-      height: 80px;
-    }
-    @include desktop {
-        display: flex;
-      align-items: center;
-      padding: 25px 0;
-      height: 80px;
-    }
+     @include tablet 
+        {
+            justify-content: center;
+            align-items: center;
+            padding: 21px 15px;
+            height: 80px;
+        }
 
- &__hamburger-icon {
-     fill: $black;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-  }
-  &__hamburger-icon:hover,
-  &__hamburger-icon:focus {
-    fill: $blue;
-  }
+    @include desktop 
+        {
+            display: flex;
+            width: 1200px;
+            justify-content: baseline;
+            align-items: center;
+            padding: 25px 0;
+            height: 80px;
+        }
+
+    &__hamburger-icon 
+        {
+            fill: $black;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+
+    &__hamburger-icon:hover,
+    &__hamburger-icon:focus 
+        {
+            fill: $blue;
+        }
 
     &__nav
         {   
@@ -69,17 +78,21 @@ min-height: 80px;
             transition-duration: $transition-duration-standard;
             transition-timing-function: $transition-timing-function-standard;
 
- @include tablet {
-      display: flex;
-      margin-left: 30px;
-    }
-    @include desktop {
-      display: flex;
-      float:left;
-      margin-left: 49px;}
+        @include tablet 
+            {
+                display: flex;
+                margin-left: 30px;
+            }
 
-            &:hover,
-            &:focus
+        @include desktop 
+            {
+                display: flex;
+                float:left;
+                margin-left: 49px;
+            }
+
+        &:hover,
+        &:focus
             {
                 color: $blue;
             }
@@ -89,6 +102,13 @@ min-height: 80px;
         {
             margin-left: 40px;
             min-width: 140px;
+
+        @include desktop
+            {
+                
+            margin-left:0;   
+            }    
+
         }
 
     &__contacts
@@ -98,35 +118,33 @@ min-height: 80px;
             align-items: center;   
             
             
-             @include desktop {
-      .display: flex;
-      min-width: 550px;
-      float:left;
-      margin-left: 49px;}
-    }
-
-        &-block
+        @include desktop 
             {
-                display: flex;
-                float: left;
-                font-weight: $font-wieght-normal;
-                height: 80px;
+                min-width: 550px;
+                float:left;
+                margin-left: 49px;
             }
+        }
 
-        &-link
-            {
-                width:161px;
-                height: 16px;
-                
-                line-height: 1.5em;
-                letter-spacing: 2%;
-                margin-top: 32px;
-                display: flex;
-                color: $background-grey;
-                fill: $light-grey;
+    &-block
+        {
+            display: flex;
+            float: left;
+            font-weight: $font-wieght-normal;
+            height: 80px;
+        }
 
-                
-            } 
+    &-link
+        {
+            width:161px;
+            height: 16px;
+            line-height: 1.5em;
+            letter-spacing: 2%;
+            margin-top: 32px;
+            display: flex;
+            color: $background-grey;
+            fill: $light-grey;
+        } 
 
 
 
@@ -138,28 +156,29 @@ min-height: 80px;
             transition-duration: $transition-duration-standard;
             transition-timing-function: $transition-timing-function-standard;
     
-                &:hover .header__contacts-icon1,
-                &:hover .header__contacts-icon2,
-                &:focus .header__contacts-icon1,
-                &:focus .header__contacts-icon2
-                {
+        &:hover .header__contacts-icon1,
+        &:hover .header__contacts-icon2,
+        &:focus .header__contacts-icon1,
+        &:focus .header__contacts-icon2
+            {
                 color: $blue;
                 fill: $blue; 
                 cursor: pointer;
-                }
+            }
 
-@include tablet {
-      display: flex;
-      .padding-left: 100px;
-      }
+        @include tablet 
+            {
+                display: flex;
+            }
+
 /*poniższy padding wspópracuje z marginem w linii 98  */
-    @include desktop 
-    {
-      display: flex;
-      float: left;
-      padding-left: 100px;
-    }
-}       
+        @include desktop 
+            {
+                display: flex;
+                float: left;
+                padding-left: 100px;
+            }
+        }       
         
                 
     &__contacts-icon1
@@ -184,7 +203,7 @@ min-height: 80px;
             transition-duration: $transition-duration-standard;
             transition-timing-function: $transition-timing-function-standard;
         }
-    }
+}
         
     
 
