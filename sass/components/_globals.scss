@@ -17,7 +17,7 @@ h2
 
 
 body
-{
+{   width: 100%;
     font-family: "Roboto", sans-serif;
     font-size: $normal-text-size;
     overflow-x: hidden;
@@ -69,19 +69,19 @@ h1,h2,h3,h4,p
 }
 
 .container
-{
-    padding: 15px 0px;
+{   
+    padding: 0px 15px;
     margin: 0 auto;  
     max-width: 480px;
 
     @include tablet 
         {
-            max-width: 768px;
+            min-width: 768px;
         }
 
     @include desktop
         {
-            max-width: 1600px;
+max-width: 1200px;
         }
 }
 
