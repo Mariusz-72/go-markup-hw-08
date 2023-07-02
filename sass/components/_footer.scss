@@ -1,7 +1,7 @@
 footer
 {
     
-    height: 252px;
+    height: 100%;
     display: flex;
     background: $background-grey;
 
@@ -21,7 +21,7 @@ footer.container
 {
     display:flex;
     flex-direction: column;
-    .width: 480px;  
+    width: 480px;  
 
             @include tablet 
                 {
@@ -119,7 +119,7 @@ footer.container
 
     &__social-box
         {
-            width:480px;        
+                   
             background: $background-grey;
 
             @include tablet 
