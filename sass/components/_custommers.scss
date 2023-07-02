@@ -1,18 +1,18 @@
-.customers
-{
+.customers{
 
 
     &__block
         {
 
-        align-items: center;
+            align-items: center;
             gap: 30px;
             justify-content: center;
-            margin: 0 auto;
-        .width: 768px;
+            margin-bottom:64px;
+            
         @include tablet 
             {
             width: 768px;
+            
             }
         @include desktop 
             {
@@ -24,18 +24,18 @@
 
     &__list
         {
-        
-
             display: flex;
-
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap:30px;
-        
-
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap:30px;
             list-style: none;
-        gap: 30px;
+            margin-bottom: 60px;
+
+        @include tablet
+            {
+            
+            }    
 
         @include desktop 
             {
@@ -56,7 +56,6 @@
             display: flex;
             justify-content:center;
             align-items:center;
-            margin-bottom: 10px;
             cursor: pointer; 
             transition-property: transform, border-color, fill;
             transition-duration: $transition-duration-standard;
@@ -69,7 +68,7 @@
             }
         @include desktop 
             {
-            width: 210px;
+            width: 170px;
             }
 
         &:hover,

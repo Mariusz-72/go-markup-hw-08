@@ -1,4 +1,4 @@
-.advert
+.advert 
 {
     background-color: $white;
     min-width: 480px;
@@ -8,51 +8,19 @@
     padding: 200px 0;
     color: $white;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), 
-                        url("../images/mobile-img/headerimagemobile-x2.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/mobile-img/headerimagemobile-x1.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;   
-    
-    @media (min-device-pixel-ratio: 2),
-        (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx)
-        {
-            background-image:linear-gradient(
-                90deg,
-                rgba(47, 48, 58, 0.4) 0%,
-                rgba(47, 48, 58, 0.4) 0%
-                ),
-                url("../images/mobile-img/headerimagemobile-x2.jpg");
-    }
-
-    @include desktop 
-    {
-    min-width: 1600px;
-    height: 600px;
     background-size: cover;
-    background-image: 
-        linear-gradient(
-        90deg,
-        rgba(47, 48, 58, 0.4) 0%,
-        rgba(47, 48, 58, 0.4) 0%),
-        url("../images/mobile-img/headerimagemobile-x1.jpg");
 
     @media (min-device-pixel-ratio: 2),
-        (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) 
-        {
-            
-        background-image: linear-gradient(
-            90deg,
-            rgba(47, 48, 58, 0.4) 0%,
-            rgba(47, 48, 58, 0.4) 0%),
-            url("../images/mobile-img/headerimagemobile-x2.jpg");
-        }
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) 
+    {
+    background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%), 
+    url("../images/mobile-img/headerimagemobile-x2.jpg");
     }
-
 
     @include tablet
     {
@@ -79,19 +47,35 @@
         }
     }
 
+    @include desktop 
+    {
+    min-width: 1600px;
+    height: 600px;
+    background-size: cover;
+    background-position:  auto 100%;
+    background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%), 
+    url("../images/mobile-img/headerimagedesktop-x1.jpg");
+
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) 
+        {
+        background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%);
+        }
+    }
+
     &__title
         {
             font-weight: 900;
-            font-size: 44px;
+            font-size: 42px;
             line-height: 1.36em;
-            text-align: center;
             letter-spacing: 0.06em;
             text-transform: uppercase;
-            min-width: 480px;
+            max-width: 600px;
             margin: 0 auto;
             margin-bottom: 30px;
-            text-shadow: 0px 4px 4px $black;
-            -webkit-text-stroke: 1px $black;
+            
             
         }
 

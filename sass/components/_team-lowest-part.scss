@@ -1,45 +1,49 @@
 .team
 {
 
-
     &__block
     {
         flex-direction: column;
         background-color: $vanila-white;
-        margin: 0px auto;
+        padding: 0px auto;
         align-items: center;
-        width: 100%;
         max-width: fit-content;
 
-        @include desktop {
-            min-width: 1600px;
-            
+        @include tablet 
+        {
+            max-width: 768px;
+        }
+
+        @include desktop 
+        {
+            max-width: 1600px;    
         }
     }
 
     
     &__list
     {
-        display: flex;
+        
         flex-direction: column;
         gap: 30px;
         justify-content: center;
         list-style: none;
 
-@include tablet {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      display: flex;
-    }
-    @include desktop {
-        
-      flex-direction: row;
-      justify-content: center;
-      display: flex;
-      padding-bottom: 30px;
-    }
+    @include tablet 
+        {   
+            display: flex;
+            flex-direction: row;
+            
+            
+        }
 
+        @include desktop 
+        {
+            flex-direction: row;
+            justify-content: center;
+            display: flex;
+            padding-bottom: 30px;
+        }
     }
 
     &__item
